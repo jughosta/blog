@@ -25,8 +25,12 @@ body {
   box-sizing: inherit;
 }
 a {
+  color: #7069fa;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+a:visited {
+  color: #8888fc;
 }
 img {
   border-style: none;

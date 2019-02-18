@@ -1,2 +1,2 @@
 # jughosta
-Jughosta's personal blog.
+Jughosta's personal blog
