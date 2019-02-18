@@ -9,8 +9,7 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
     <SEO title={markdownRemark.frontmatter.title} />
     <article
       style={{
-        border: `1px solid ${theme.borderColor}`,
-        borderRadius: '6px',
+        borderRadius: '4px',
         padding: '1.5rem 2.25rem',
         background: theme.cardBackgroundColor
       }}
@@ -20,18 +19,26 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
       }}>
         <h1>
           {markdownRemark.frontmatter.title}
-          <div
-            style={{
-              color: theme.textColorLight,
-              fontSize: '0.875rem',
-              fontWeight: 'normal'
-            }}
-          >
-            {markdownRemark.frontmatter.date}
-          </div>
         </h1>
       </header>
+      <div
+        style={{
+          marginTop: '1.5rem',
+          borderTop: `4px solid ${theme.accentColor}`,
+          paddingTop: '1.5rem',
+          width: '3rem'
+        }}
+      />
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      <div
+        style={{
+          color: theme.textColorLight,
+          fontSize: '0.875rem',
+          marginTop: '1.5rem'
+        }}
+      >
+        {markdownRemark.frontmatter.date}
+      </div>
     </article>
   </Layout>
 );
