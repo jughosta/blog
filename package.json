@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jughosta-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Jughosta's personal blog.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.1.4",
     "gatsby-image": "^2.0.29",
@@ -16,10 +15,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "sharp": "^0.21.3"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react"
   ],
   "license": "MIT",
   "scripts": {
@@ -27,13 +28,19 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "lint": "eslint ./ --fix",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/JuliaRechkunova/blog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/JuliaRechkunova/blog/issues"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.0",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
   }
 }

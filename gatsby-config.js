@@ -1,8 +1,20 @@
+var palette = require('./palette');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `jughosta`,
+    description: `Jughosta's personal blog.`,
+    author: `@jughosta`,
+    theme: {
+      maxWidth: 1024,
+      accentColor: palette.purple400,
+      backgroundColor: palette.bluegrey050,
+      cardBackgroundColor: palette.white,
+      borderColor: palette.bluegrey100,
+      textColor: palette.bluegrey600,
+      textColorLight: palette.bluegrey300,
+      palette
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,17 +30,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `jughosta-blog`,
+        short_name: `jughosta`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: palette.bluegrey400,
+        theme_color: palette.bluegrey400,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
