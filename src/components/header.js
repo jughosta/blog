@@ -37,15 +37,25 @@ const Header = ({ isIndexPage }) => (
             {
               isIndexPage ?
                 title :
-                <Link
-                  to="/"
-                  style={{
-                    color: theme.accentColor,
-                    textDecoration: 'none',
-                  }}
-                >
-                  {title}
-                </Link>
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <div style={{
+                    marginRight: '1rem'
+                  }}>
+                    ←
+                  </div>
+                  <Link
+                    to="/"
+                    style={{
+                      color: theme.accentColor,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {title}
+                  </Link>
+                </div>
             }
           </div>
         </div>
