@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 const Footer = () => (
   <StaticQuery
     query={graphql`
-      query FooterQuery {
+      query {
         site {
           siteMetadata {
             theme {
