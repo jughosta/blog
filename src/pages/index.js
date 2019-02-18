@@ -1,15 +1,68 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import BlogPreview from '../components/blog-preview';
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`web`, `frontend`, `react`]} />
-    <h1>Hello world!</h1>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            theme {
+              textColor,
+              textColorLight,
+              borderColor,
+              cardBackgroundColor
+            }
+          }
+        }
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                date(formatString: "DD MMMM, YYYY")
+              }
+              excerpt
+            }
+          }
+        }
+      }
+    `}
+    render={({ allMarkdownRemark: { edges }, site: { siteMetadata: { theme }} }) => (
+      <Layout>
+        <SEO title="Home" keywords={['web', 'frontend', 'react', 'react-native', 'javascript', 'es6', 'css', 'flutter']} />
+        <ul style={{
+          margin: 0,
+          padding: 0,
+          listStyle: 'none'
+        }}>
+          {
+            edges.map(({ node }) => (
+              <li
+                key={node.id}
+                style={{
+                  display: 'block'
+                }}
+              >
+                <BlogPreview
+                  node={node}
+                  theme={theme}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </Layout>
+    )}
+  />
 );
 
 export default IndexPage;

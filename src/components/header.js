@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 const Header = () => (
   <StaticQuery
     query={graphql`
-      query HeaderQuery {
+      query {
         site {
           siteMetadata {
             title,
@@ -35,7 +35,11 @@ const Header = () => (
             height: '4rem'
           }}
         >
-          <h2 style={{ margin: 0 }}>
+          <div style={{
+            margin: 0,
+            fontSize: '1.25rem',
+            fontWeight: 'bold'
+          }}>
             <Link
               to="/"
               style={{
@@ -45,7 +49,7 @@ const Header = () => (
             >
               {title}
             </Link>
-          </h2>
+          </div>
         </div>
       </header>
     )}

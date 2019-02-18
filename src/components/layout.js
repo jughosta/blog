@@ -9,7 +9,7 @@ import './layout.css';
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutQuery {
+      query {
         site {
           siteMetadata {
             theme {
@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={({ site: { siteMetadata: { theme }}}) => (
+    render={({ site: { siteMetadata: { theme }} }) => (
       <React.Fragment>
         <Header />
         <div
