@@ -2,7 +2,7 @@ const palette = require('./palette');
 
 module.exports = {
   siteMetadata: {
-    title: `jughosta`,
+    title: `@jughosta`,
     description: `Jughosta's personal blog.`,
     author: `@jughosta`,
     theme: {

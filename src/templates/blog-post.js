@@ -2,9 +2,11 @@ import React from 'react';
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
+import SEO from '../components/seo';
 
 const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }}) => (
-  <Layout>
+  <Layout isIndexPage={false}>
+    <SEO title={markdownRemark.frontmatter.title} />
     <article
       style={{
         border: `1px solid ${theme.borderColor}`,
@@ -48,6 +50,7 @@ export const query = graphql`
     site {
       siteMetadata {
         theme {
+          accentColor,
           textColor,
           textColorLight,
           borderColor,

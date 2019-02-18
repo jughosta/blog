@@ -5,6 +5,7 @@ const BlogPreview = ({ node, theme }) => (
   <section
     style={{
       border: `1px solid ${theme.borderColor}`,
+      borderLeft: `4px solid ${theme.accentColor}`,
       borderRadius: '6px',
       padding: '1.5rem 2.25rem',
       background: theme.cardBackgroundColor,

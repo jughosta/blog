@@ -12,6 +12,7 @@ const IndexPage = () => (
         site {
           siteMetadata {
             theme {
+              accentColor,
               textColor,
               textColorLight,
               borderColor,
@@ -37,7 +38,7 @@ const IndexPage = () => (
       }
     `}
     render={({ allMarkdownRemark: { edges }, site: { siteMetadata: { theme }} }) => (
-      <Layout>
+      <Layout isIndexPage>
         <SEO title="Home" keywords={['web', 'frontend', 'react', 'react-native', 'javascript', 'es6', 'css', 'flutter']} />
         <ul style={{
           margin: 0,

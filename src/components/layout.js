@@ -6,7 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import './layout.css';
 
-const Layout = ({ children }) => (
+const Layout = ({ isIndexPage, children }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     `}
     render={({ site: { siteMetadata: { theme }} }) => (
       <React.Fragment>
-        <Header />
+        <Header isIndexPage={isIndexPage} />
         <div
           style={{
             margin: '0 auto',

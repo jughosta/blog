@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-const Header = () => (
+const Header = ({ isIndexPage }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -11,20 +11,14 @@ const Header = () => (
             title,
             theme {
               maxWidth,
-              accentColor,
-              cardBackgroundColor
+              accentColor
             }
           }
         }
       }
     `}
     render={({ site: { siteMetadata: { title, theme }}}) => (
-      <header
-        style={{
-          background: theme.cardBackgroundColor,
-          borderTop: `4px solid ${theme.accentColor}`
-        }}
-      >
+      <header>
         <div
           style={{
             margin: '0 auto',
@@ -40,15 +34,19 @@ const Header = () => (
             fontSize: '1.25rem',
             fontWeight: 'bold'
           }}>
-            <Link
-              to="/"
-              style={{
-                color: theme.accentColor,
-                textDecoration: 'none',
-              }}
-            >
-              {title}
-            </Link>
+            {
+              isIndexPage ?
+                title :
+                <Link
+                  to="/"
+                  style={{
+                    color: theme.accentColor,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {title}
+                </Link>
+            }
           </div>
         </div>
       </header>
