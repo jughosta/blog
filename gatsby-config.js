@@ -34,8 +34,8 @@ module.exports = {
         name: `jughosta-blog`,
         short_name: `jughosta`,
         start_url: `/`,
-        background_color: palette.bluegrey400,
-        theme_color: palette.bluegrey400,
+        background_color: palette.purple400,
+        theme_color: palette.purple400,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
