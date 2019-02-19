@@ -32,6 +32,10 @@ a {
 a:visited {
   color: #8888fc;
 }
+a:hover,
+a:active {
+  opacity: 0.8;
+}
 img {
   border-style: none;
 }

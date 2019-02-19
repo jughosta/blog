@@ -26,7 +26,7 @@ const Header = ({ isIndexPage }) => (
             padding: '0 1rem',
             display: 'flex',
             alignItems: 'center',
-            height: '4rem'
+            height: '6rem'
           }}
         >
           <div style={{
@@ -37,25 +37,15 @@ const Header = ({ isIndexPage }) => (
             {
               isIndexPage ?
                 title :
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center'
-                }}>
-                  <div style={{
-                    marginRight: '1rem'
-                  }}>
-                    ←
-                  </div>
-                  <Link
-                    to="/"
-                    style={{
-                      color: theme.accentColor,
-                      textDecoration: 'none',
-                    }}
-                  >
-                    {title}
-                  </Link>
-                </div>
+                <Link
+                  to="/"
+                  style={{
+                    color: theme.accentColor,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {title.replace('@', '← ')}
+                </Link>
             }
           </div>
         </div>

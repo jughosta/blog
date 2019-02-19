@@ -13,6 +13,7 @@ module.exports = {
       borderColor: palette.bluegrey100,
       textColor: palette.bluegrey600,
       textColorLight: palette.bluegrey300,
+      boxShadow: `inset 0 0 0 1px ${palette.bluegrey100}, 0 5px 15px -6px rgba(0, 0, 0, 0.1)`,
       palette
     }
   },

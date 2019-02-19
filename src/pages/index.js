@@ -16,7 +16,8 @@ const IndexPage = () => (
               textColor,
               textColorLight,
               borderColor,
-              cardBackgroundColor
+              cardBackgroundColor,
+              boxShadow
             }
           }
         }

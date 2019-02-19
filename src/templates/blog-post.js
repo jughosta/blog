@@ -9,8 +9,9 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
     <SEO title={markdownRemark.frontmatter.title} />
     <article
       style={{
+        boxShadow: theme.boxShadow,
         borderRadius: '4px',
-        padding: '1.5rem 2.25rem',
+        padding: '2.25rem',
         background: theme.cardBackgroundColor
       }}
     >
@@ -26,7 +27,7 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
           marginTop: '1.5rem',
           borderTop: `4px solid ${theme.accentColor}`,
           paddingTop: '1.5rem',
-          width: '3rem'
+          width: '6rem'
         }}
       />
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
@@ -61,7 +62,8 @@ export const query = graphql`
           textColor,
           textColorLight,
           borderColor,
-          cardBackgroundColor
+          cardBackgroundColor,
+          boxShadow
         }
       }
     }

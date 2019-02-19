@@ -32,17 +32,7 @@ const Footer = () => (
             height: '4rem'
           }}
         >
-          © {new Date().getFullYear()}, Built with&nbsp;
-          <a
-            href="https://www.gatsbyjs.org"
-            target="_blank"
-            rel="noopener"
-            style={{
-              color: theme.textColorLight
-            }}
-          >
-            Gatsby
-          </a>
+          © {new Date().getFullYear()}
         </div>
       </footer>
     )}

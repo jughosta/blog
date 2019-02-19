@@ -4,28 +4,46 @@ import { Link } from "gatsby";
 const BlogPreview = ({ node, theme }) => (
   <section
     style={{
+      boxShadow: theme.boxShadow,
       borderRadius: '4px',
-      padding: '1.5rem 2.25rem',
+      padding: '2.25rem',
       background: theme.cardBackgroundColor,
       marginBottom: '1rem'
     }}
   >
+    <div
+      style={{
+        color: theme.textColorLight,
+        fontSize: '0.875rem',
+        marginBottom: '0.5rem'
+      }}
+    >
+      {node.frontmatter.date}
+    </div>
     <h2>
       <Link
         to={node.fields.slug}
+        style={{
+          textDecoration: 'none'
+        }}
       >
         {node.frontmatter.title}
       </Link>
     </h2>
     <p>{node.excerpt}</p>
-    <div
-      style={{
-        color: theme.textColorLight,
-        fontSize: '0.875rem',
-        marginTop: '0.5rem'
-      }}
-    >
-      {node.frontmatter.date}
+    <div style={{
+      marginTop: '1rem'
+    }}>
+      <Link
+        to={node.fields.slug}
+        style={{
+          color: theme.textColor,
+          textDecoration: 'none',
+          fontWeight: 'bold'
+        }}
+      >
+        Read more →
+      </Link>
     </div>
   </section>
 );
