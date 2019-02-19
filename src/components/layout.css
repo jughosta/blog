@@ -144,13 +144,16 @@ strong {
   font-weight: bold;
 }
 code {
-  font-size: 0.85rem;
+  display: block;
+  font-size: 0.75rem;
   line-height: 1.45rem;
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: #e6e6ff;
+  color: #0c008c;
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
-  padding: 0.75rem 0;
+  padding: 0.75rem;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 480px) {
