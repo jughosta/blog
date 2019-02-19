@@ -40,7 +40,7 @@ const IndexPage = () => (
     `}
     render={({ allMarkdownRemark: { edges }, site: { siteMetadata: { theme }} }) => (
       <Layout isIndexPage>
-        <SEO title="Home" keywords={['web', 'frontend', 'react', 'react-native', 'javascript', 'es6', 'css', 'flutter']} />
+        <SEO title="Personal blog" keywords={['web', 'frontend', 'react', 'react-native', 'javascript', 'es6', 'css', 'flutter']} />
         <ul style={{
           margin: 0,
           padding: 0,
