@@ -11,8 +11,8 @@ module.exports = {
       backgroundColor: palette.bluegrey050,
       cardBackgroundColor: palette.white,
       borderColor: palette.bluegrey100,
-      textColor: palette.bluegrey600,
-      textColorLight: palette.bluegrey300,
+      textColor: palette.bluegrey900,
+      textColorLight: palette.bluegrey600,
       boxShadow: `inset 0 0 0 1px ${palette.bluegrey100}, 0 5px 15px -6px rgba(0, 0, 0, 0.1)`,
       palette
     }
