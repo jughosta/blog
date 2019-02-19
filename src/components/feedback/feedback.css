@@ -1,0 +1,21 @@
+.feedback {
+  display: inline-flex;
+  align-items: center;
+}
+
+.feedback__icon {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.feedback__icon--type-like:hover {
+  color: #65d6ad;
+}
+
+.feedback__icon--type-dislike:hover {
+  color: #f86a6a;
+}
+
+.feedback__icon + .feedback__icon {
+  margin-left: 0.875rem;
+}

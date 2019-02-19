@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from '../components/seo';
+import Feedback from '../components/feedback/feedback';
 
 const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }}) => (
   <Layout isIndexPage={false}>
@@ -35,15 +36,24 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
           }}
         />
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-        <div
+        <footer
           style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginTop: '1.5rem',
             color: theme.textColorLight,
             fontSize: '0.875rem',
-            marginTop: '1.5rem'
+            minHeight: '2rem'
           }}
         >
-          {markdownRemark.frontmatter.date}
-        </div>
+          <span>
+            {markdownRemark.frontmatter.date}
+          </span>
+          <Feedback
+            width="1rem"
+          />
+        </footer>
       </div>
     </article>
   </Layout>
