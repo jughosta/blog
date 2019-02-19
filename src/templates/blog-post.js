@@ -11,34 +11,39 @@ const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }})
       style={{
         boxShadow: theme.boxShadow,
         borderRadius: '4px',
-        padding: '2.25rem',
+        padding: '2.785rem 1.5rem',
         background: theme.cardBackgroundColor
       }}
     >
-      <header style={{
-        marginBottom: '1rem'
+      <div style={{
+        maxWidth: '680px',
+        margin: '0 auto'
       }}>
-        <h1>
-          {markdownRemark.frontmatter.title}
-        </h1>
-      </header>
-      <div
-        style={{
-          marginTop: '1.5rem',
-          borderTop: `4px solid ${theme.accentColor}`,
-          paddingTop: '1.5rem',
-          width: '6rem'
-        }}
-      />
-      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
-      <div
-        style={{
-          color: theme.textColorLight,
-          fontSize: '0.875rem',
-          marginTop: '1.5rem'
-        }}
-      >
-        {markdownRemark.frontmatter.date}
+        <header style={{
+          marginBottom: '1rem'
+        }}>
+          <h1>
+            {markdownRemark.frontmatter.title}
+          </h1>
+        </header>
+        <div
+          style={{
+            marginTop: '1.5rem',
+            borderTop: `4px solid ${theme.accentColor}`,
+            paddingTop: '1.5rem',
+            width: '6rem'
+          }}
+        />
+        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <div
+          style={{
+            color: theme.textColorLight,
+            fontSize: '0.875rem',
+            marginTop: '1.5rem'
+          }}
+        >
+          {markdownRemark.frontmatter.date}
+        </div>
       </div>
     </article>
   </Layout>
