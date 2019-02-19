@@ -30,7 +30,7 @@ const BlogPreview = ({ node, theme }) => (
         {node.frontmatter.title}
       </Link>
     </h2>
-    <p>{node.excerpt}</p>
+    <p>{node.frontmatter.spoiler}</p>
     <div style={{
       marginTop: '1rem'
     }}>

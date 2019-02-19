@@ -30,9 +30,9 @@ const IndexPage = () => (
               }
               frontmatter {
                 title
+                spoiler
                 date(formatString: "DD MMMM, YYYY")
               }
-              excerpt
             }
           }
         }
