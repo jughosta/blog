@@ -47,6 +47,7 @@ module.exports = {
         trackingId: "UA-33234679-8",
         head: false,
         exclude: [],
+        cookieDomain: "blog.jughosta.me"
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
