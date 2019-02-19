@@ -12,7 +12,7 @@ So I have this simple alias in my dotfiles:
 alias recent="git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\""
 ```
 
-It allows me to list my 10 recently modified branches like this:
+It allows me to list 10 recently modified branches like this:
 
 ```
 $ recent
