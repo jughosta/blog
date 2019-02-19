@@ -140,6 +140,9 @@ p {
 p + p {
   margin-top: 1.45rem;
 }
+li + li {
+  margin-top: 1rem;
+}
 strong {
   font-weight: bold;
 }
