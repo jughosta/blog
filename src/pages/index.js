@@ -47,19 +47,24 @@ const IndexPage = () => (
           listStyle: 'none'
         }}>
           {
-            edges.map(({ node }) => (
-              <li
-                key={node.id}
-                style={{
-                  display: 'block'
-                }}
-              >
-                <BlogPreview
-                  node={node}
-                  theme={theme}
-                />
-              </li>
-            ))
+            edges.map(({ node }) => {
+              if (node.fields.slug.startsWith('/draft')) {
+                return;
+              }
+              return (
+                <li
+                  key={node.id}
+                  style={{
+                    display: 'block'
+                  }}
+                >
+                  <BlogPreview
+                    node={node}
+                    theme={theme}
+                  />
+                </li>
+              );
+            })
           }
         </ul>
       </Layout>
