@@ -25,12 +25,13 @@ body {
   box-sizing: inherit;
 }
 a {
-  color: #7069fa;
+  color: #035388;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:visited {
-  color: #8888fc;
+  color: #035388;
+  opacity: 0.9;
 }
 a:hover,
 a:active {
@@ -153,8 +154,7 @@ code {
   display: block;
   font-size: 0.75rem;
   line-height: 1.45rem;
-  background-color: #e6e6ff;
-  color: #0c008c;
+  background-color: rgba(240, 244, 248, 0.5);
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
