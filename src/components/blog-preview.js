@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const BlogPreview = ({ node, theme }) => (
   <section
     style={{
-      marginBottom: '3.5rem'
+      marginBottom: '3.75rem'
     }}
   >
     <div
