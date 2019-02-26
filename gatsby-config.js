@@ -7,7 +7,7 @@ module.exports = {
     author: `@jughosta`,
     theme: {
       maxWidth: 1024,
-      accentColor: palette.lightbluevivid900,
+      accentColor: palette.lightbluevivid500,
       backgroundColor: palette.bluegrey050,
       cardBackgroundColor: palette.white,
       borderColor: palette.bluegrey100,

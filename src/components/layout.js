@@ -26,7 +26,7 @@ const Layout = ({ isIndexPage, children }) => (
           style={{
             margin: '0 auto',
             maxWidth: theme.maxWidth,
-            padding: '0 1rem 1rem',
+            padding: '1.5rem 1rem 1rem',
             minHeight: 'calc(100vh - 10rem)'
           }}
         >

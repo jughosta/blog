@@ -4,11 +4,7 @@ import { Link } from "gatsby";
 const BlogPreview = ({ node, theme }) => (
   <section
     style={{
-      boxShadow: theme.boxShadow,
-      borderRadius: '4px',
-      padding: '2.25rem',
-      background: theme.cardBackgroundColor,
-      marginBottom: '1rem'
+      marginBottom: '3.5rem'
     }}
   >
     <div

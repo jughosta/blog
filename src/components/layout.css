@@ -13,7 +13,7 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   color: #102a43;
-  background: #f0f4f8;
+  background: #fff;
 }
 * {
   box-sizing: inherit;
@@ -25,12 +25,12 @@ body {
   box-sizing: inherit;
 }
 a {
-  color: #035388;
+  color: #2bb0ed;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:visited {
-  color: #035388;
+  color: #2bb0ed;
   opacity: 0.9;
 }
 a:hover,

@@ -8,14 +8,7 @@ import Feedback from '../components/feedback/feedback';
 const BlogPost = ({ data: { markdownRemark, site: { siteMetadata: { theme }} }}) => (
   <Layout isIndexPage={false}>
     <SEO title={markdownRemark.frontmatter.title} />
-    <article
-      style={{
-        boxShadow: theme.boxShadow,
-        borderRadius: '4px',
-        padding: '2.785rem 1.5rem',
-        background: theme.cardBackgroundColor
-      }}
-    >
+    <article>
       <div style={{
         maxWidth: '680px',
         margin: '0 auto'
