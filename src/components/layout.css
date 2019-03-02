@@ -12,7 +12,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  color: #102a43;
+  color: #22292f;
   background: #fff;
 }
 * {
@@ -25,12 +25,12 @@ body {
   box-sizing: inherit;
 }
 a {
-  color: #2bb0ed;
+  color: #3490dc;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:visited {
-  color: #2bb0ed;
+  color: #3490dc;
   opacity: 0.9;
 }
 a:hover,
@@ -42,11 +42,6 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
-}
-code,
-pre {
-  font-family: monospace, monospace;
-  font-size: 1rem;
 }
 button,
 input,
@@ -154,7 +149,7 @@ code {
   display: block;
   font-size: 0.75rem;
   line-height: 1.45rem;
-  background-color: rgba(240, 244, 248, 0.5);
+  background-color: #f8fafc;
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
@@ -173,7 +168,7 @@ details > summary {
 }
 figcaption {
   text-align: center;
-  color: #486581;
+  color: #3d4852;
   font-style: italic;
   font-size: 0.875rem;
 }

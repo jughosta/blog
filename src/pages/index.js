@@ -16,10 +16,7 @@ const IndexPage = () => (
             theme {
               accentColor,
               textColor,
-              textColorLight,
-              borderColor,
-              cardBackgroundColor,
-              boxShadow
+              textColorLight
             }
           }
         }

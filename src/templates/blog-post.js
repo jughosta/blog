@@ -69,10 +69,7 @@ export const query = graphql`
         theme {
           accentColor,
           textColor,
-          textColorLight,
-          borderColor,
-          cardBackgroundColor,
-          boxShadow
+          textColorLight
         }
       }
     }

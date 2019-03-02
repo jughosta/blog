@@ -9,11 +9,11 @@
 }
 
 .feedback__icon--type-like:hover {
-  color: #65d6ad;
+  color: #51d88a;
 }
 
 .feedback__icon--type-dislike:hover {
-  color: #f86a6a;
+  color: #ef5753;
 }
 
 .feedback__icon + .feedback__icon {

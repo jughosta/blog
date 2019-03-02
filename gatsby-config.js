@@ -1,5 +1,3 @@
-const palette = require('./palette');
-
 module.exports = {
   siteMetadata: {
     title: `@jughosta`,
@@ -7,14 +5,9 @@ module.exports = {
     author: `@jughosta`,
     theme: {
       maxWidth: 1024,
-      accentColor: palette.lightbluevivid500,
-      backgroundColor: palette.bluegrey050,
-      cardBackgroundColor: palette.white,
-      borderColor: palette.bluegrey100,
-      textColor: palette.bluegrey900,
-      textColorLight: palette.bluegrey600,
-      boxShadow: `inset 0 0 0 1px ${palette.bluegrey100}, 0 5px 15px -6px rgba(0, 0, 0, 0.1)`,
-      palette
+      accentColor: '#3490dc',
+      textColor: '#22292f',
+      textColorLight: '#3d4852'
     }
   },
   plugins: [

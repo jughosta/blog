@@ -9,8 +9,7 @@ const Footer = () => (
           siteMetadata {
             theme {
               maxWidth,
-              textColorLight,
-              borderColor
+              textColorLight
             }
           }
         }
@@ -25,14 +24,13 @@ const Footer = () => (
             padding: '0 1rem',
             color: theme.textColorLight,
             fontSize: '0.875rem',
-            textAlign: 'right',
             display: 'flex',
-            justifyContent: 'flex-end',
+            justifyContent: 'center',
             alignItems: 'center',
             height: '4rem'
           }}
         >
-          © {new Date().getFullYear()}
+          Julia Rechkunova / @jughosta, © {new Date().getFullYear()}
         </div>
       </footer>
     )}
