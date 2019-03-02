@@ -3,6 +3,7 @@ module.exports = {
     title: `@jughosta`,
     description: `Jughosta's personal blog.`,
     author: `@jughosta`,
+    siteUrl: `https://blog.jughosta.me`,
     theme: {
       maxWidth: 1024,
       accentColor: '#3490dc',
@@ -46,6 +47,29 @@ module.exports = {
       options: {
         url: `https://medium.com/feed/@jughosta`,
         name: `Medium`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        exclude: ['/draft-*'],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`
       }
     }
   ],
