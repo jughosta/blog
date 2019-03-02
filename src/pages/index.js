@@ -5,6 +5,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import BlogPreview from '../components/blog-preview';
 
+import { getMediumPostSlug } from '../utils';
+
 const IndexPage = () => (
   <StaticQuery
     query={graphql`
@@ -31,14 +33,24 @@ const IndexPage = () => (
               frontmatter {
                 title
                 spoiler
-                date(formatString: "DD MMMM, YYYY")
+                date
               }
+            }
+          }
+        }
+        allFeedMedium (limit: 2) {
+          edges {
+            node {
+              id
+              link
+              title
+              pubDate
             }
           }
         }
       }
     `}
-    render={({ allMarkdownRemark: { edges }, site: { siteMetadata: { theme }} }) => (
+    render={({ allMarkdownRemark: { edges: markdownEdges }, allFeedMedium: { edges: mediumEdges }, site: { siteMetadata: { theme }} }) => (
       <Layout isIndexPage>
         <SEO title="Personal blog" keywords={['web', 'frontend', 'react', 'react-native', 'javascript', 'es6', 'css', 'flutter']} />
         <ul style={{
@@ -47,7 +59,7 @@ const IndexPage = () => (
           listStyle: 'none'
         }}>
           {
-            edges.map(({ node }) => {
+            markdownEdges.map(({ node }) => {
               if (node.fields.slug.startsWith('/draft')) {
                 return;
               }
@@ -60,6 +72,32 @@ const IndexPage = () => (
                 >
                   <BlogPreview
                     node={node}
+                    theme={theme}
+                  />
+                </li>
+              );
+            })
+          }
+          {
+            mediumEdges.map(({ node }) => {
+              return (
+                <li
+                  key={node.id}
+                  style={{
+                    display: 'block'
+                  }}
+                >
+                  <BlogPreview
+                    node={{
+                      frontmatter: {
+                        title: node.title,
+                        date: node.pubDate,
+                        spoiler: ''
+                      },
+                      fields: {
+                        slug: getMediumPostSlug(node)
+                      }
+                    }}
                     theme={theme}
                   />
                 </li>

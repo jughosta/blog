@@ -27,8 +27,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,9 +47,13 @@ module.exports = {
         exclude: [],
         cookieDomain: "blog.jughosta.me"
       },
+    },
+    {
+      resolve: 'gatsby-source-rss-feed',
+      options: {
+        url: `https://medium.com/feed/@jughosta`,
+        name: `Medium`
+      }
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
+import { formatDate } from '../utils';
 
 const BlogPreview = ({ node, theme }) => (
   <section
@@ -14,7 +15,7 @@ const BlogPreview = ({ node, theme }) => (
         marginBottom: '0.5rem'
       }}
     >
-      {node.frontmatter.date}
+      {formatDate(node.frontmatter.date)}
     </div>
     <h2>
       <Link

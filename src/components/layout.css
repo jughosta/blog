@@ -171,6 +171,12 @@ blockquote {
 details > summary {
   margin: 1.45rem 0;
 }
+figcaption {
+  text-align: center;
+  color: #486581;
+  font-style: italic;
+  font-size: 0.875rem;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
