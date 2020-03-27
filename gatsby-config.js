@@ -3,7 +3,7 @@ module.exports = {
     title: `@jughosta`,
     description: `Jughosta's personal blog.`,
     author: `@jughosta`,
-    siteUrl: `https://blog.jughosta.me`,
+    siteUrl: `https://blog.jughosta.com`,
     theme: {
       maxWidth: 1024,
       accentColor: '#3490dc',
@@ -39,7 +39,7 @@ module.exports = {
         trackingId: "UA-33234679-8",
         head: false,
         exclude: [],
-        cookieDomain: "blog.jughosta.me"
+        cookieDomain: "blog.jughosta.com"
       },
     },
     {
